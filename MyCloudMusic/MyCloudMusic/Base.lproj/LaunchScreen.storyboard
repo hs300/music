@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OWy-Xr-vyv">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nvY-ot-00l">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashBanner" translatesAutoresizingMaskIntoConstraints="NO" id="024-Zg-we0">
+                                        <rect key="frame" x="78" y="250" width="237" height="309"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="237" id="YSf-ZJ-nih"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashLogo" translatesAutoresizingMaskIntoConstraints="NO" id="I2u-vj-99r">
+                                        <rect key="frame" x="81.666666666666686" y="687.33333333333337" width="230" height="31.666666666666629"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="230" id="ybb-sk-TFN"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="I2u-vj-99r" firstAttribute="centerX" secondItem="nvY-ot-00l" secondAttribute="centerX" id="4Lf-uU-fmr"/>
+                                    <constraint firstItem="024-Zg-we0" firstAttribute="centerX" secondItem="nvY-ot-00l" secondAttribute="centerX" id="Cbb-yu-Oqc"/>
+                                    <constraint firstAttribute="bottom" secondItem="024-Zg-we0" secondAttribute="bottom" constant="200" id="oZR-bw-Tqw"/>
+                                    <constraint firstAttribute="bottom" secondItem="I2u-vj-99r" secondAttribute="bottom" constant="40" id="zFx-Od-7zp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Fn7-18-41X"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nvY-ot-00l" firstAttribute="top" secondItem="Fn7-18-41X" secondAttribute="top" id="9rI-ne-hWU"/>
+                            <constraint firstItem="Fn7-18-41X" firstAttribute="bottom" secondItem="nvY-ot-00l" secondAttribute="bottom" id="Xgk-S3-9SW"/>
+                            <constraint firstItem="nvY-ot-00l" firstAttribute="leading" secondItem="Fn7-18-41X" secondAttribute="leading" id="YZW-jX-cAn"/>
+                            <constraint firstItem="Fn7-18-41X" firstAttribute="trailing" secondItem="nvY-ot-00l" secondAttribute="trailing" id="qjh-bD-8VN"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.671755725190835" y="374.64788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="SplashBanner" width="74.666664123535156" height="309"/>
+        <image name="SplashLogo" width="188" height="31.666666030883789"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
