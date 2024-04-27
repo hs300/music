@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIImage (SuperUI)
 
 + (UIImage *)imageWithColor:(UIColor *)color;
+- (UIImage *)withTintColor;
+
 
 @end
 

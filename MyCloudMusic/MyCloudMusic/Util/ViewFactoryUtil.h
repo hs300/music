@@ -21,6 +21,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (QMUIButton *)primaryOutlineButton;
 
 + (UITableView *)tabelView;
+
++ (UICollectionView *)collectionView;
+
++ (UICollectionViewFlowLayout *)collectionViewFlowLayout;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -11,7 +11,8 @@
 #import "DiscoveryButtonCell.h"
 #import "ButtonData.h"
 #import "SheetGroupCell.h"
-@interface DiscoveryController ()
+#import "SongGroupCell.h"
+@interface DiscoveryController ()<SheetGroupDelegate>
 
 @end
 
@@ -27,6 +28,10 @@
     [self.tableView registerClass:[DiscoveryButtonCell class] forCellReuseIdentifier:DiscoveryBtnCellName];
     
     [self.tableView registerClass:[SheetGroupCell class ] forCellReuseIdentifier:SheetGroupCellName];
+    
+    [self.tableView registerClass:[SongGroupCell class ] forCellReuseIdentifier:SongGroupCellName];
+    
+    [self setTitle:@"xxxx"];
 }
 
 - (void)initDatum{
@@ -50,9 +55,20 @@
 //    }];
     
     
-    [self loadSheetData];
+    //[self loadSheetData];
+    
+    [self LoadSongData];
 }
 
+
+- (void)LoadSongData{
+    [[DefaultRepository shared] songsWithController:self success:^(BaseResponse * _Nonnull baseResponse, Meta * _Nonnull meta, NSArray * _Nonnull data) {
+        SongData *result = [SongData new];
+        result.datum = data;
+        [self.datum addObject:result];
+        [self.tableView reloadData];
+    }];
+}
 
 -(void)loadSheetData{
     [[DefaultRepository shared] sheets:12 controller:self success:^(BaseResponse * _Nonnull baseResponse, Meta * _Nonnull meta, NSArray * _Nonnull data) {
@@ -85,9 +101,15 @@
         case StyleSheet:{
             SheetGroupCell *cell = [tableView dequeueReusableCellWithIdentifier:SheetGroupCellName forIndexPath:indexPath];
             [cell bind:data];
+            cell.delegate = self;
             return cell;
-            
         }
+        case StyleSong:{
+            SongGroupCell *cell = [tableView dequeueReusableCellWithIdentifier:SongGroupCellName forIndexPath:indexPath];
+            [cell bind:data];
+            return cell;
+        }
+        
         default:
             return nil;;
     }
@@ -119,7 +141,14 @@
     else if ([data isKindOfClass:[SheetData class]]){
         return StyleSheet;
     }
+    else if([data isKindOfClass:[SongData class]]){
+        return StyleSong;
+    }
     return StyleNone;
+}
+
+- (void)sheetClick:(Sheet *)data{
+    NSLog(@"xxxxxxx %@", data.title);
 }
 
 @end

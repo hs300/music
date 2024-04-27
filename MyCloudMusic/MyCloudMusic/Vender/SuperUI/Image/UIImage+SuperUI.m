@@ -20,5 +20,10 @@
     return image;
 }
 
+- (UIImage *)withTintColor{
+    return  [self imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+}
+
+
 
 @end

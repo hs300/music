@@ -10,6 +10,7 @@
 #import "Video.h"
 #import "Ad.h"
 #import "Sheet.h"
+#import "Song.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DefaultRepository : NSObject
@@ -26,6 +27,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 - (void)sheets:(int)size controller:(nullable BaseLogicController *)controller success:(SuperHttpListSuccess)success;
+
+#pragma mark - 单曲
+-(void)songsWithController:(nullable BaseLogicController *)controller success:(SuperHttpListSuccess)success;
 
 @end
 

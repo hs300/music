@@ -14,6 +14,9 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
+  - CocoaLumberjack (3.8.2):
+    - CocoaLumberjack/Core (= 3.8.2)
+  - CocoaLumberjack/Core (3.8.2)
   - GKCycleScrollView (1.2.1)
   - MBProgressHUD (1.2.0)
   - MJExtension (3.4.1)
@@ -328,6 +331,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - CocoaLumberjack
   - GKCycleScrollView
   - MBProgressHUD
   - MJExtension
@@ -342,6 +346,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - AFNetworking
+    - CocoaLumberjack
     - GKCycleScrollView
     - MBProgressHUD
     - MJExtension
@@ -355,6 +360,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
+  CocoaLumberjack: f8d89a516e7710fdb2e9b8f1560b16ec6040eef0
   GKCycleScrollView: 57b4586bdb47c970734fab043c0215ceb4b1fd5c
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJExtension: 21c5f6f8c4d5d8844b7ae8fbae08fed0b501f961
@@ -366,6 +372,6 @@ SPEC CHECKSUMS:
   SDWebImage: f9258c58221ed854cfa0e2b80ee4033710b1c6d3
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
 
-PODFILE CHECKSUM: 5a0017c0364ba112c2a96bef6ddd4b1dd50ab00d
+PODFILE CHECKSUM: d42a25e762dcdd41996ec465df25a2aedee71d8b
 
 COCOAPODS: 1.11.3

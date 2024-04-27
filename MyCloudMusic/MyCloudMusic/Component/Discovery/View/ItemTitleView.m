@@ -46,6 +46,14 @@
 -(UIImageView *)moreIconView{
     if (!_moreIconView) {
         _moreIconView = [UIImageView new];
+        _moreIconView.myWidth = 15;
+        _moreIconView.myHeight = 15;
+        _moreIconView.tintColor = [UIColor black80];
+        _moreIconView.myCenterY = 0;
+        _moreIconView.myRight = 10;
+        _moreIconView.image = R.image.superChevronRight;
+        _moreIconView.contentMode = UIViewContentModeScaleAspectFit;
+        
     }
     return _moreIconView;
 }

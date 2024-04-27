@@ -7,9 +7,10 @@
 
 #import "BaseLogicController.h"
 #import "BannerCell.h"
+#import "BaseTitleController.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DiscoveryController : BaseLogicController
+@interface DiscoveryController : BaseTitleController
 
 @end
 

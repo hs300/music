@@ -64,4 +64,24 @@
     return result;
 }
 
++ (UICollectionView *)collectionView{
+    UICollectionView *result = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:[self collectionViewFlowLayout]];
+    result.backgroundColor = [UIColor clearColor];
+    [result setShowsVerticalScrollIndicator:NO];
+    [result setShowsHorizontalScrollIndicator:NO];
+    [result setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
+    result.myWidth = MyLayoutSize.fill;
+    result.myHeight = MyLayoutSize.fill;
+    return result;
+}
+
++ (UICollectionViewFlowLayout *)collectionViewFlowLayout{
+    UICollectionViewFlowLayout *result = [UICollectionViewFlowLayout new];
+    result.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    result.scrollDirection = UICollectionViewScrollDirectionVertical;
+    result.minimumLineSpacing = 0;
+    result.minimumInteritemSpacing = 0;
+    return result;
+}
+
 @end

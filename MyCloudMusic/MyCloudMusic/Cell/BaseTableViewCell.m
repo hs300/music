@@ -46,5 +46,9 @@
     return MyOrientation_Vert;
 }
 
+- (CGSize)systemLayoutSizeFittingSize:(CGSize)targetSize withHorizontalFittingPriority:(UILayoutPriority)horizontalFittingPriority verticalFittingPriority:(UILayoutPriority)verticalFittingPriority{
+    return [self.container systemLayoutSizeFittingSize:targetSize];
+}
+
 
 @end

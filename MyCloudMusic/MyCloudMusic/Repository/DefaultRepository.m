@@ -43,4 +43,13 @@
     [SuperHttpUtil requestListObjectWith:[Sheet class] url:URL_SHEET parameters:@{@"size":[NSNumber numberWithInt:size]} success:success];
 }
 
+
+#pragma mark - 单曲
+-(void)songsWithController:(nullable BaseLogicController *)controller success:(SuperHttpListSuccess)success{
+    [SuperHttpUtil requestListObjectWith:[Song class] url:URL_SONG parameters:nil cachePolicy:MSCachePolicyNetElseCache controller:controller success:success];
+}
+
+
+
+
 @end

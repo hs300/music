@@ -108,4 +108,9 @@
     }];
 }
 
+#pragma mark - 请求列表
++ (void)requestListObjectWith:(Class)clazz url:(NSString *)url parameters:(nullable NSDictionary *)parameters cachePolicy:(MSCachePolicy)cachePolicy controller:(nullable BaseLogicController *)controller success:(SuperHttpListSuccess)success{
+    [self requestListObjectWith:clazz url:url parameters:parameters cachePolicy:cachePolicy loading:NO controller:controller success:success failure:nil];
+}
+
 @end

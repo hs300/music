@@ -16,4 +16,5 @@ target 'MyCloudMusic' do
   pod "MBProgressHUD"
   pod "SDWebImage"
   pod "QTEventBus"
+  pod "CocoaLumberjack"
 end
